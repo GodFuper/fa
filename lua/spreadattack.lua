@@ -421,7 +421,7 @@ function GiveOrders(Data)
     if OkayToMessWithArmy(Data.From) then --Check for cheats/exploits
         local unit = GetEntityById(Data.unit_id)
         -- Skip units with no valid shadow orders.
-        if not Data.unit_orders or not Data.unit_orders[1] then
+        if not unit or not Data.unit_orders or not Data.unit_orders[1] then
             return
         end
         
