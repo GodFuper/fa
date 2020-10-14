@@ -448,7 +448,11 @@ function GiveOrders(Data)
                 continue
             end
             
-            local target = order.Position
+            local target
+            if order.Position then
+                local position = order.Position
+                target = Vector(position[1], GetTerrainHeight(position[1], position[3]), position[3])
+            end
             if order.EntityId then
                 target = GetEntityById(order.EntityId)
             end
