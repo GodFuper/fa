@@ -1008,14 +1008,14 @@ options = {
                 title = "<LOC options_factory_preorders_title>Planned Factory Pre-Orders",
                 key = 'ui_FactoryPreOrders',
                 type = 'toggle',
-                default = 1,
+                default = 0,
                 set = function(key, value, startup)
                     ConExecute("ui_FactoryPreOrders " .. tostring(value))
                 end,
                 custom = {
                     states = {
-                        { text = "<LOC _On>", key = 1 },
                         { text = "<LOC _Off>", key = 0 },
+                        { text = "<LOC _On>", key = 1 },
                     },
                 },
             },
